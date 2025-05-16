@@ -17,8 +17,8 @@
       margin: 40px auto;
       background: #fff;
       border-radius: 12px;
-      padding: 32px 24px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.04);
+      padding: 30px 32px;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.05);
     }
     h1 {
       margin-top: 0;
@@ -26,29 +26,28 @@
       color: #23398d;
     }
     h2 {
-      margin-top: 0.3em;
-      font-size: 1.1em;
+      margin-top: 0.5em;
+      font-size: 1.15em;
       color: #4a68c4;
       font-weight: normal;
     }
     p {
       line-height: 1.6;
-      margin-bottom: 20px;
     }
     .button {
       display: inline-flex;
       align-items: center;
+      margin-top: 16px;
+      margin-bottom: 12px;
       background: #406adf;
       color: white;
-      padding: 10px 16px;
+      padding: 12px 20px;
       border-radius: 6px;
       text-decoration: none;
-      font-size: 1em;
-      margin: 10px 8px 0 0;
+      font-size: 1.05em;
       transition: background 0.2s ease;
-    }
-    .button:hover {
-      background: #345bcc;
+      max-width: 100%;
+      word-break: break-word;
     }
     .button svg {
       width: 18px;
@@ -56,38 +55,42 @@
       margin-right: 8px;
       fill: white;
     }
+    .button:hover {
+      background: #345bcc;
+    }
     .products {
-      margin-top: 32px;
+      margin-top: 30px;
     }
     .product {
       background: #eef3fc;
       padding: 14px 18px;
       border-radius: 8px;
-      margin-bottom: 14px;
-      font-size: 0.95em;
+      margin-bottom: 16px;
     }
     .footer {
-      margin-top: 36px;
+      margin-top: 40px;
       font-size: 0.85em;
       color: #888;
       text-align: center;
     }
-    @media (max-width: 600px) {
+    @media (max-width: 640px) {
       .container {
-        margin: 20px 12px;
-        padding: 24px;
+        margin: 20px 16px;
+        padding: 20px;
       }
       h1 {
-        font-size: 1.5em;
+        font-size: 1.6em;
       }
       h2 {
-        font-size: 1em;
+        font-size: 1.05em;
       }
       .button {
         display: block;
         width: 100%;
         justify-content: center;
-        margin: 10px 0;
+        text-align: center;
+        font-size: 1em;
+        padding: 14px;
       }
     }
   </style>
