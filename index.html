@@ -1,38 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Dojo4Education — Тренажёры для образования и развития навыков</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dojo4Education — AI для образования</title>
   <style>
-    body { font-family: system-ui, sans-serif; margin: 0; background: #f5f7fa; color: #222; }
-    .main { max-width: 600px; margin: 60px auto; background: #fff; border-radius: 10px; box-shadow: 0 0 16px #d3e3ff70; padding: 40px 30px 30px 30px; }
-    h1 { color: #23398d; }
-    h2 { color: #4478c5; }
-    .logo { display: block; margin: 0 auto 32px auto; width: 120px; }
-    .cta { background: #406adf; color: #fff; padding: 18px 28px; border: none; border-radius: 5px; font-size: 1.2em; margin-top: 28px; cursor: pointer; text-decoration: none; display: inline-block; }
-    .products { margin-top: 40px; }
-    .product { background: #f1f6fd; border-radius: 7px; padding: 15px 18px; margin-bottom: 16px; }
-    .footer { margin-top: 44px; color: #888; font-size: 0.95em; text-align: center; }
+    body {
+      font-family: system-ui, sans-serif;
+      background: #f4f6fa;
+      margin: 0;
+      padding: 0;
+      color: #222;
+    }
+    .container {
+      max-width: 700px;
+      margin: 60px auto;
+      background: #fff;
+      border-radius: 12px;
+      padding: 40px 32px;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.05);
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 2em;
+      color: #23398d;
+    }
+    h2 {
+      margin-top: 0.5em;
+      font-size: 1.2em;
+      color: #4a68c4;
+      font-weight: normal;
+    }
+    p {
+      line-height: 1.6;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 24px;
+      background: #259cd8;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: background 0.2s ease;
+    }
+    .button:hover {
+      background: #1d8ec5;
+    }
+    .products {
+      margin-top: 40px;
+    }
+    .product {
+      background: #eef3fc;
+      padding: 16px 20px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+    }
+    .footer {
+      margin-top: 48px;
+      font-size: 0.9em;
+      color: #888;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .container {
+        margin: 24px 16px;
+        padding: 24px;
+      }
+    }
   </style>
 </head>
 <body>
-  <div class="main">
-    <!-- <img class="logo" src="logo.png" alt="Dojo4Education"> -->
+  <div class="container">
     <h1>Dojo4Education</h1>
-    <h2>Экосистема сервисов для образования и развития навыков с помощью ИИ</h2>
-    <p>Тренируйте навыки, готовьтесь к защите диплома, совершенствуйте речь и мышление — всё с помощью современных AI-инструментов.</p>
-    <a class="cta" href="https://t.me/Dojo4EducationBot" target="_blank">Наш Telegram-бот</a>
+    <h2>Мини-приложения и тренажёры для развития навыков с помощью ИИ</h2>
+    <p>Готовьтесь к защите диплома, улучшайте речь и мышление, развивайтесь с помощью простых и понятных AI-инструментов.</p>
+
+    <a href="https://t.me/dojo4education_official_group" class="button" target="_blank">
+      Перейти в Telegram-группу
+    </a>
+
     <div class="products">
       <div class="product">
         <strong>ThesisAudit</strong> — тренажёр защиты диплома.  
-        <br>Генерирует вопросы, принимает голосовые ответы, анализирует аргументацию.
+        Генерирует вопросы, принимает голосовые ответы, анализирует аргументацию.
       </div>
       <div class="product">
-        <strong>LingvaPulse (скоро)</strong> — AI-платформа для изучения иностранных языков.
+        <strong>LingvaPulse (скоро)</strong> — AI-инструменты для изучения языков.
       </div>
-      <!-- Добавляй сюда новые продукты -->
     </div>
+
     <div class="footer">
       © 2025 Dojo4Education &nbsp;|&nbsp; Powered by KimTechIndustries
     </div>
