@@ -35,19 +35,19 @@
       line-height: 1.6;
     }
     .button {
-      display: inline-flex;
+      display: flex;
       align-items: center;
-      margin-top: 16px;
-      margin-bottom: 12px;
+      justify-content: center;
       background: #406adf;
       color: white;
       padding: 12px 20px;
       border-radius: 6px;
       text-decoration: none;
       font-size: 1.05em;
-      transition: background 0.2s ease;
-      max-width: 100%;
-      word-break: break-word;
+      margin-top: 16px;
+      margin-bottom: 12px;
+      width: 100%;
+      box-sizing: border-box;
     }
     .button svg {
       width: 18px;
@@ -85,10 +85,6 @@
         font-size: 1.05em;
       }
       .button {
-        display: block;
-        width: 100%;
-        justify-content: center;
-        text-align: center;
         font-size: 1em;
         padding: 14px;
       }
@@ -101,11 +97,13 @@
     <h2>Мини-приложения и тренажёры для развития навыков с помощью ИИ</h2>
     <p>Готовьтесь к защите диплома, улучшайте речь и мышление, развивайтесь с помощью простых и понятных AI-инструментов.</p>
 
+    <!-- Кнопка Telegram-группы -->
     <a href="https://t.me/dojo4education_official_group" class="button" target="_blank">
       <svg viewBox="0 0 240 240"><path d="M120 0C53.728 0 0 53.728 0 120s53.728 120 120 120 120-53.728 120-120S186.272 0 120 0zm48.088 82.16-19.24 90.944c-1.456 6.432-5.296 7.992-10.72 4.96l-29.616-21.8-14.288 13.744c-1.576 1.576-2.888 2.888-5.904 2.888l2.12-30.008 54.624-49.36c2.376-2.08-.512-3.248-3.68-1.168l-67.48 42.464-29.064-9.08c-6.328-1.976-6.432-6.328 1.336-9.368l113.832-43.92c5.288-1.952 9.92 1.28 8.12 9.008z"/></svg>
       Telegram-группа
     </a>
 
+    <!-- Кнопка Скачать -->
     <a href="https://github.com/Dojo4education/Dojo4education-site/releases/download/01.10052025/ThesisAudit.exe" class="button" target="_blank" style="background: #3c7dc4;">
       <svg viewBox="0 0 448 512"><path d="M0 93.7v157.4l204.8-28.3V65.4L0 93.7zM224 61.7v162.5l224-31V32L224 61.7zM0 260.9v157.4l204.8 28.3V289.2L0 260.9zM224 288.3v162.5l224 31V320l-224-31.7z"/></svg>
       Скачать для Windows
