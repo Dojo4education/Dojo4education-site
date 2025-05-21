@@ -16,17 +16,92 @@
 
     .container {
       max-width: 700px;
-      margin: 40px auto;
+      margin: 0 auto;
       background: #fff;
       border-radius: 12px;
-      padding: 30px 32px;
+      padding: 0 32px 30px 32px;
       box-shadow: 0 0 18px rgba(0, 0, 0, 0.05);
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #23398d;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px 12px 0 0;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+
+    .brand:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: #406adf;
+      color: white;
+      padding: 10px 16px;
+      font-size: 0.95em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover {
+      background-color: #365cc6;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      min-width: 180px;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .dropdown-content a,
+    .dropdown-content .disabled-item {
+      color: #23398d;
+      padding: 10px 16px;
+      display: block;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f3ff;
+    }
+
+    .disabled-item {
+      color: #888;
+      cursor: not-allowed;
+      background: #f4f4f4;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     h1 {
       font-size: 1.8em;
       color: #23398d;
-      margin-top: 0;
     }
 
     h2 {
@@ -79,36 +154,26 @@
       color: #888;
       text-align: center;
     }
-
-    @media (max-width: 640px) {
-      .container {
-        margin: 20px 16px;
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 1.6em;
-      }
-
-      h2 {
-        font-size: 1.05em;
-      }
-
-      .button {
-        font-size: 1em;
-        padding: 14px;
-        width: 100%;
-      }
-    }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="topbar">
+      <a href="index.html" class="brand">Dojo4Education</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ▾</button>
+        <div class="dropdown-content">
+          <a href="thesisaudit.html">ThesisAudit</a>
+          <span class="disabled-item">LingvaPulse (скоро)</span>
+        </div>
+      </div>
+    </div>
+
     <h1>ThesisAudit</h1>
     <h2>AI-тренажёр для подготовки к защите дипломов и курсовых</h2>
 
     <p>
-      <strong>ThesisAudit</strong> — это настольное приложение, которое моделирует защиту диплома с помощью искусственного интеллекта. Оно задаёт вопросы по вашей работе, принимает голосовые ответы, анализирует их и предлагает уточняющие вопросы.
+      <strong>ThesisAudit</strong> — настольное приложение, моделирующее работу аттестационной комиссии. Оно задаёт вопросы по вашей работе, принимает голосовые ответы, анализирует их и предлагает уточняющие вопросы. Вы получаете отчёт с сильными и слабыми сторонами.
     </p>
 
     <h3>Как это работает</h3>
@@ -117,25 +182,24 @@
       <li><b>2.</b> Получаете 10 вопросов по содержанию вашей работы.</li>
       <li><b>3.</b> Отвечаете голосом — как на защите.</li>
       <li><b>4.</b> Система анализирует ответы и формирует уточняющие вопросы.</li>
-      <li><b>5.</b> Получаете отчёт со списком сильных и слабых сторон.</li>
+      <li><b>5.</b> Получаете финальный отчёт с анализом аргументации.</li>
     </ul>
 
     <h3>Кредиты и условия</h3>
     <p>
-      После авторизации предоставляется <b>5 бесплатных кредитов</b> для ознакомления.<br>
-      <b>1 кредит = 5000 слов</b> (округляется вверх).<br>
-      Пополнение через <b>Telegram Stars</b> (пакеты 200 и 1000).<br>
-      Кредиты действуют 1 месяц, после чего остаток замораживается до нового доната.
+      После авторизации вы получаете <b>5 бесплатных кредитов</b> для ознакомления.<br>
+      <b>1 кредит = 5000 слов</b> (с округлением вверх).<br>
+      Пополнение — через <b>Telegram Stars</b> (доступны пакеты на 200 и 1000 звёзд).<br>
+      Кредиты активны <b>1 месяц</b>, затем замораживаются до следующего доната.
     </p>
 
-    <!-- Кнопка скачать -->
     <a href="https://github.com/Dojo4education/Dojo4education-site/releases/download/01.20052025/ThesisAudit.exe" class="button" target="_blank" rel="noopener noreferrer">
       <svg viewBox="0 0 448 512"><path d="M0 93.7v157.4l204.8-28.3V65.4L0 93.7zM224 61.7v162.5l224-31V32L224 61.7zM0 260.9v157.4l204.8 28.3V289.2L0 260.9zM224 288.3v162.5l224 31V320l-224-31.7z"/></svg>
       Скачать для Windows
     </a>
 
     <div class="footer">
-      © 2025 Dojo4Education &nbsp;|&nbsp; <a href="index.html">На главную</a>
+      © 2025 Dojo4Education
     </div>
   </div>
 </body>
