@@ -16,15 +16,90 @@
 
     .container {
       max-width: 700px;
-      margin: 40px auto;
+      margin: 0 auto;
       background: #fff;
       border-radius: 12px;
-      padding: 30px 32px;
+      padding: 0 32px 30px 32px;
       box-shadow: 0 0 18px rgba(0, 0, 0, 0.05);
     }
 
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #23398d;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 12px 12px 0 0;
+      margin-bottom: 24px;
+    }
+
+    .brand {
+      color: white;
+      font-weight: bold;
+      font-size: 1.1em;
+      text-decoration: none;
+    }
+
+    .brand:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropbtn {
+      background-color: #406adf;
+      color: white;
+      padding: 10px 16px;
+      font-size: 0.95em;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropbtn:hover {
+      background-color: #365cc6;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #fff;
+      min-width: 180px;
+      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .dropdown-content a,
+    .dropdown-content .disabled-item {
+      color: #23398d;
+      padding: 10px 16px;
+      display: block;
+      text-decoration: none;
+      font-size: 0.95em;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f3ff;
+    }
+
+    .disabled-item {
+      color: #888;
+      cursor: not-allowed;
+      background: #f4f4f4;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
     h1 {
-      margin-top: 0;
       font-size: 1.8em;
       color: #23398d;
     }
@@ -88,8 +163,8 @@
 
     @media (max-width: 640px) {
       .container {
-        margin: 20px 16px;
-        padding: 20px;
+        margin: 0 16px;
+        padding: 0 20px 20px 20px;
       }
 
       h1 {
@@ -116,26 +191,29 @@
 </head>
 <body>
   <div class="container">
+    <div class="topbar">
+      <a href="index.html" class="brand">Dojo4Education</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ▾</button>
+        <div class="dropdown-content">
+          <a href="thesisaudit.html">ThesisAudit</a>
+          <span class="disabled-item">LingvaPulse (скоро)</span>
+        </div>
+      </div>
+    </div>
+
     <h1>Dojo4Education</h1>
     <h2>Мини-приложения и тренажёры для развития навыков с помощью ИИ</h2>
     <p>Готовьтесь к защите диплома, улучшайте речь и мышление, развивайтесь с помощью простых и понятных AI-инструментов.</p>
 
-    <!-- Telegram-группа -->
     <a href="https://t.me/dojo4education_official_group" class="button" target="_blank">
-      <svg viewBox="0 0 240 240"><path d="M120 0C53.728 0 0 53.728 0 120s53.728 120 120 120 120-53.728 120-120S186.272 0 120 0zm48.088 82.16-19.24 90.944c-1.456 6.432-5.296 7.992-10.72 4.96l-29.616-21.8-14.288 13.744c-1.576 1.576-2.888 2.888-5.904 2.888l2.12-30.008 54.624-49.36c2.376-2.08-.512-3.248-3.68-1.168l-67.48 42.464-29.064-9.08c-6.328-1.976-6.432-6.328 1.336-9.368l113.832-43.92c5.288-1.952 9.92 1.28 8.12 9.008z"/></svg>
+      <svg viewBox="0 0 240 240"><path d="..."/></svg>
       Telegram-группа
     </a>
 
-    <!-- Patreon -->
     <a href="https://www.patreon.com/c/Dojo4Education" class="button" target="_blank" style="background: #ff424d;">
-      <svg viewBox="0 0 24 24"><path d="M0 0h5.333v24H0V0zm15.556 6.667a5.778 5.778 0 1 1 0 11.556 5.778 5.778 0 0 1 0-11.556z" /></svg>
+      <svg viewBox="0 0 24 24"><path d="..."/></svg>
       Поддержать на Patreon
-    </a>
-
-    <!-- Подробнее о ThesisAudit -->
-    <a href="thesisaudit.html" class="button" style="background: #3c7dc4;">
-      <svg viewBox="0 0 448 512"><path d="M0 93.7v157.4l204.8-28.3V65.4L0 93.7zM224 61.7v162.5l224-31V32L224 61.7zM0 260.9v157.4l204.8 28.3V289.2L0 260.9zM224 288.3v162.5l224 31V320l-224-31.7z"/></svg>
-      Подробнее о ThesisAudit
     </a>
 
     <div class="products">
