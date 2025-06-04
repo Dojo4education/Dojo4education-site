@@ -22,4 +22,19 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+  var langSelect = document.getElementById('language-select');
+  if (langSelect) {
+    var langs = ['ru', 'en', 'de', 'fr', 'it', 'es', 'ko', 'ja', 'zh'];
+    var current = location.pathname.split('/')[1];
+    if (!langs.includes(current)) current = 'ru';
+    langSelect.value = current;
+    langSelect.addEventListener('change', function () {
+      var target = this.value;
+      var file = location.pathname.split('/').pop();
+      if (!file || !file.endsWith('.html')) file = 'index.html';
+      var newPath = target === 'ru' ? '/' + file : '/' + target + '/' + file;
+      window.location.pathname = newPath;
+    });
+  }
 });
