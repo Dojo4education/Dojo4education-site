@@ -1,3 +1,6 @@
+const DOWNLOAD_URL =
+  'https://github.com/Dojo4education/Dojo4education-site/releases/download/01.25052025/ThesisAudit.exe';
+
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.dropdown').forEach(function(dropdown) {
     var btn = dropdown.querySelector('.dropbtn');
@@ -37,4 +40,8 @@ document.addEventListener('DOMContentLoaded', function () {
       window.location.pathname = newPath;
     });
   }
+
+  document.querySelectorAll('.download-btn').forEach(function (btn) {
+    btn.setAttribute('href', DOWNLOAD_URL);
+  });
 });
