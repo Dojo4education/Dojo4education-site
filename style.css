@@ -1,6 +1,16 @@
+:root {
+  --brand-color: #23398d;
+  --primary-color: #406adf;
+  --primary-hover: #365cc6;
+  --accent-red: #ff424d;
+  --disabled-text: #888;
+  --background-color: #f4f6fa;
+  --product-bg: #eef3fc;
+}
+
 body {
   font-family: system-ui, sans-serif;
-  background: #f4f6fa;
+  background: var(--background-color);
   margin: 0;
   padding: 0;
   color: #222;
@@ -19,11 +29,24 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #23398d;
+  background: var(--brand-color);
   color: white;
   padding: 12px 24px;
   border-radius: 12px 12px 0 0;
   margin-bottom: 24px;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#language-select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95em;
 }
 
 .brand {
@@ -43,7 +66,7 @@ body {
 }
 
 .dropbtn {
-  background-color: #406adf;
+  background-color: var(--primary-color);
   color: white;
   padding: 10px 16px;
   font-size: 0.95em;
@@ -53,7 +76,7 @@ body {
 }
 
 .dropbtn:hover {
-  background-color: #365cc6;
+  background-color: var(--primary-hover);
 }
 
 .dropdown-content {
@@ -68,9 +91,13 @@ body {
   z-index: 1;
 }
 
+.dropdown-content.show {
+  display: block;
+}
+
 .dropdown-content a,
 .dropdown-content .disabled-item {
-  color: #23398d;
+  color: var(--brand-color);
   padding: 10px 16px;
   display: block;
   text-decoration: none;
@@ -82,7 +109,7 @@ body {
 }
 
 .disabled-item {
-  color: #888;
+  color: var(--disabled-text);
   cursor: not-allowed;
   background: #f4f4f4;
 }
@@ -93,7 +120,7 @@ body {
 
 h1 {
   font-size: 1.8em;
-  color: #23398d;
+  color: var(--brand-color);
 }
 
 h2 {
@@ -116,7 +143,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #406adf;
+  background: var(--primary-color);
   color: white;
   padding: 12px 20px;
   border-radius: 6px;
@@ -127,6 +154,14 @@ p {
   min-width: 220px;
   max-width: 100%;
   box-sizing: border-box;
+}
+
+.patreon-btn {
+  background: var(--accent-red);
+}
+
+.download-btn {
+  margin: 24px auto 16px auto;
 }
 
 .button svg {
@@ -145,7 +180,7 @@ p {
 }
 
 .product {
-  background: #eef3fc;
+  background: var(--product-bg);
   padding: 14px 18px;
   border-radius: 8px;
   margin-bottom: 16px;
@@ -154,7 +189,7 @@ p {
 .footer {
   margin-top: 40px;
   font-size: 0.85em;
-  color: #888;
+  color: var(--disabled-text);
   text-align: center;
 }
 
