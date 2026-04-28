@@ -1,243 +1,159 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dojo4Education — AI для образования</title>
+  <title>Dojo4Education — AI tools for education</title>
+  <meta name="description" content="AI-powered mini-apps and training tools for academic preparation, oral answers, and skill development." />
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <!-- Open Graph мета-теги для Telegram и соцсетей -->
-  <meta property="og:title" content="Dojo4Education — AI для образования" />
-  <meta property="og:description" content="Мини-приложения и тренажёры для развития навыков. ThesisAudit, LingvaPulse и другие AI-инструменты." />
+  <meta property="og:title" content="Dojo4Education — AI tools for education" />
+  <meta property="og:description" content="AI-powered mini-apps and training tools for academic preparation, oral answers, and skill development." />
   <meta property="og:image" content="https://dojo4education.com/preview.jpg" />
   <meta property="og:url" content="https://dojo4education.com" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Dojo4Education" />
 
-  <style>
-    body {
-      font-family: system-ui, sans-serif;
-      background: #f4f6fa;
-      margin: 0;
-      padding: 0;
-      color: #222;
-    }
-
-    .container {
-      max-width: 700px;
-      margin: 0 auto;
-      background: #fff;
-      border-radius: 12px;
-      padding: 0 32px 30px 32px;
-      box-shadow: 0 0 18px rgba(0, 0, 0, 0.05);
-    }
-
-    .topbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: #23398d;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 12px 12px 0 0;
-      margin-bottom: 24px;
-    }
-
-    .brand {
-      color: white;
-      font-weight: bold;
-      font-size: 1.1em;
-      text-decoration: none;
-    }
-
-    .brand:hover {
-      text-decoration: underline;
-    }
-
-    .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-
-    .dropbtn {
-      background-color: #406adf;
-      color: white;
-      padding: 10px 16px;
-      font-size: 0.95em;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .dropbtn:hover {
-      background-color: #365cc6;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      right: 0;
-      background-color: #fff;
-      min-width: 180px;
-      box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      overflow: hidden;
-      z-index: 1;
-    }
-
-    .dropdown-content a,
-    .dropdown-content .disabled-item {
-      color: #23398d;
-      padding: 10px 16px;
-      display: block;
-      text-decoration: none;
-      font-size: 0.95em;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f0f3ff;
-    }
-
-    .disabled-item {
-      color: #888;
-      cursor: not-allowed;
-      background: #f4f4f4;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    h1 {
-      font-size: 1.8em;
-      color: #23398d;
-    }
-
-    h2 {
-      margin-top: 0.5em;
-      font-size: 1.15em;
-      color: #4a68c4;
-      font-weight: normal;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    .button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #406adf;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 1.05em;
-      margin: 16px auto 12px auto;
-      width: auto;
-      min-width: 220px;
-      max-width: 100%;
-      box-sizing: border-box;
-    }
-
-    .button svg {
-      width: 18px;
-      height: 18px;
-      margin-right: 8px;
-      fill: white;
-    }
-
-    .button:hover {
-      opacity: 0.9;
-    }
-
-    .products {
-      margin-top: 30px;
-    }
-
-    .product {
-      background: #eef3fc;
-      padding: 14px 18px;
-      border-radius: 8px;
-      margin-bottom: 16px;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 0.85em;
-      color: #888;
-      text-align: center;
-    }
-
-    @media (max-width: 640px) {
-      .container {
-        margin: 0 16px;
-        padding: 0 20px 20px 20px;
-      }
-
-      h1 {
-        font-size: 1.6em;
-      }
-
-      h2 {
-        font-size: 1.05em;
-      }
-
-      .button {
-        font-size: 1em;
-        padding: 14px;
-        width: 100%;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      .container {
-        max-width: 960px;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="container">
-    <div class="topbar">
-      <a href="index.html" class="brand">Dojo4Education</a>
+<body data-page="index">
+  <div class="orb2"></div>
+
+  <nav>
+    <a href="index.html" class="brand" aria-label="Dojo4Education home">
+      <span class="brand-mark">D</span>
+      Dojo<span>4</span>Education
+    </a>
+    <div class="nav-right">
+      <a class="nav-link" href="#about" data-i18n="common.about">About</a>
+      <a class="nav-link" href="#contact" data-i18n="common.contact">Contact</a>
       <div class="dropdown">
-        <button class="dropbtn">Products ▾</button>
+        <button class="dropbtn"><span data-i18n="common.products">Products</span> ▾</button>
         <div class="dropdown-content">
-          <a href="thesisaudit.html">ThesisAudit</a>
-          <span class="disabled-item">LingvaPulse (скоро)</span>
+          <a href="thesisaudit.html">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <span data-i18n="common.thesisAudit">ThesisAudit</span>
+          </a>
+          <span class="disabled-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span data-i18n="common.lingvaPulse">LingvaPulse</span>
+            <span class="badge-soon" data-i18n="common.soon">soon</span>
+          </span>
         </div>
       </div>
+      <select id="lang-select" class="lang-select" aria-label="Language">
+        <option value="en">EN</option>
+        <option value="ru">RU</option>
+        <option value="ko">KO</option>
+      </select>
     </div>
+  </nav>
 
-    <h1>Dojo4Education</h1>
-    <h2>Мини-приложения и тренажёры для развития навыков с помощью ИИ</h2>
-    <p>Готовьтесь к защите диплома, улучшайте речь и мышление, развивайтесь с помощью простых и понятных AI-инструментов.</p>
-
-    <a href="https://t.me/dojo4education_official_group" class="button" target="_blank">
-      <svg viewBox="0 0 240 240"><path d="..."/></svg>
-      Telegram-группа
-    </a>
-
-    <a href="https://www.patreon.com/c/Dojo4Education" class="button" target="_blank" style="background: #ff424d;">
-      <svg viewBox="0 0 24 24"><path d="..."/></svg>
-      Поддержать на Patreon
-    </a>
-
-    <div class="products">
-      <div class="product">
-        <strong>ThesisAudit</strong> — тренажёр защиты диплома.  
-        Генерирует вопросы, принимает голосовые ответы, анализирует аргументацию.
-      </div>
-      <div class="product">
-        <strong>LingvaPulse (скоро)</strong> — AI-инструменты для изучения языков.
+  <header class="hero">
+    <div>
+      <div class="hero-eyebrow" data-i18n="index.eyebrow">AI tools for education</div>
+      <h1 data-i18n-html="index.title">Practice skills with <span class="accent">AI-powered trainers</span></h1>
+      <p class="hero-sub" data-i18n="index.subtitle">Dojo4Education develops compact AI mini-apps that help learners prepare, explain, answer, and improve practical academic skills.</p>
+      <div class="cta-group">
+        <a href="#products" class="btn-primary" data-i18n="index.ctaProducts">Explore products</a>
+        <a href="thesisaudit.html" class="btn-secondary" data-i18n="index.ctaThesis">View ThesisAudit</a>
       </div>
     </div>
-
-    <div class="footer">
-      © 2025 Dojo4Education &nbsp;|&nbsp; Powered by AI
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-icon">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#00e5ff" stroke-width="1.4">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          <path d="M12.2 7.5 9.8 12h3.1l-1.1 4.5 3.5-6h-3.2l.1-3z" fill="#00e5ff" stroke="none"/>
+        </svg>
+      </div>
+      <div class="visual-title" data-i18n="index.visualTitle">Mini-apps and training tools for skill development</div>
+      <div class="visual-lines">
+        <div class="visual-line"><span style="--w: 78%"></span></div>
+        <div class="visual-line"><span style="--w: 56%"></span></div>
+        <div class="visual-line"><span style="--w: 88%"></span></div>
+      </div>
     </div>
-  </div>
+  </header>
+
+  <hr class="divider" />
+
+  <section id="products" class="section">
+    <div class="section-label" data-i18n="index.productsLabel">// products</div>
+    <h2 class="section-title" data-i18n="index.productsTitle">Focused tools instead of generic AI chats</h2>
+    <div class="products-grid">
+      <a href="thesisaudit.html" class="product-card active">
+        <div class="product-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#00e5ff" stroke-width="1.5">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+            <polyline points="14 2 14 8 20 8"/>
+            <line x1="16" y1="13" x2="8" y2="13"/>
+            <line x1="16" y1="17" x2="8" y2="17"/>
+          </svg>
+        </div>
+        <div class="product-name" data-i18n="common.thesisAudit">ThesisAudit</div>
+        <div class="product-desc" data-i18n="index.thesisDesc">AI trainer for thesis defense and oral academic preparation. It generates questions, accepts voice answers, and analyzes reasoning.</div>
+        <span class="product-tag tag-active" data-i18n="index.available">available</span>
+      </a>
+
+      <div class="product-card disabled">
+        <div class="product-icon purple">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#bda7ff" stroke-width="1.5">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="product-name" data-i18n="common.lingvaPulse">LingvaPulse</div>
+        <div class="product-desc" data-i18n="index.lingvaDesc">AI tools for language learning: smart drills, speech analysis, and personalized progress tracking.</div>
+        <span class="product-tag tag-soon" data-i18n="common.soon">soon</span>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="about" class="section">
+    <div class="section-label" data-i18n="index.aboutLabel">// business profile</div>
+    <h2 class="section-title" data-i18n="index.aboutTitle">Small software business, focused on education technology</h2>
+    <div class="about-grid">
+      <div class="info-card">
+        <p class="info-text" data-i18n="index.aboutText">Dojo4Education is a registered software development project in South Korea. The goal is to build practical AI tools for students, learners, and educators — starting with oral preparation and skill training.</p>
+        <ul class="info-list">
+          <li data-i18n-html="index.businessName"><strong>Business name:</strong> Dojo4Education</li>
+          <li data-i18n-html="index.businessNameKr"><strong>Registered Korean name:</strong> 도조포에듀케이션</li>
+          <li data-i18n-html="index.businessType"><strong>Business type:</strong> Software development</li>
+          <li data-i18n-html="index.businessFocus"><strong>Focus:</strong> AI tools for education and skill development</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <h3 class="product-name" data-i18n="index.roadmapTitle">Roadmap</h3>
+        <p class="info-text" data-i18n="index.roadmapText">The current focus is ThesisAudit. LingvaPulse and additional learning tools are planned as the product line expands.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="contact" class="section compact">
+    <div class="section-label" data-i18n="index.contactLabel">// contact</div>
+    <h2 class="section-title" data-i18n="index.contactTitle">Business inquiries and product updates</h2>
+    <p class="hero-sub" data-i18n="index.contactText">For business communication, partnership inquiries, or product questions, use email. Community updates are available through Telegram.</p>
+    <div class="cta-group">
+      <a href="mailto:contact@dojo4education.com" class="btn-primary" data-i18n="index.emailButton">Contact by email</a>
+      <a href="https://t.me/dojo4education_official_group" class="btn-secondary" target="_blank" rel="noopener noreferrer" data-i18n="index.telegramButton">Open Telegram</a>
+    </div>
+  </section>
+
+  <footer>
+    <div data-i18n="common.footer">© 2026 Dojo4Education · Powered by AI</div>
+    <div class="footer-links">
+      <a href="thesisaudit.html" data-i18n="common.thesisAudit">ThesisAudit</a>
+      <a href="https://t.me/dojo4education_official_group" target="_blank" rel="noopener noreferrer" data-i18n="common.telegram">Telegram community</a>
+    </div>
+  </footer>
+
+  <script src="site.js"></script>
 </body>
 </html>
